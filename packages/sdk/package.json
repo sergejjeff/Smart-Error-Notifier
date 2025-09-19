@@ -1,6 +1,9 @@
 {
   "name": "@smart-error/sdk",
   "version": "0.1.0",
+  "description": "Smart Error Notifier SDK for Node.js - capture and report errors to your SEN API",
+  "license": "MIT",
+  "author": "Sergei <you@example.com>",
   "type": "module",
   "main": "dist/index.js",
   "module": "dist/index.js",
@@ -14,8 +17,27 @@
   "files": [
     "dist"
   ],
+  "keywords": [
+    "errors",
+    "monitoring",
+    "sdk",
+    "nodejs",
+    "observability"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergejjeff/smart-error-sdk.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sergejjeff/smart-error-sdk/issues"
+  },
+  "homepage": "https://github.com/sergejjeff/smart-error-sdk#readme",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "build": "tsc -p tsconfig.json",
-    "dev": "tsx watch src/index.ts"
+    "dev": "tsx watch src/index.ts",
+    "prepublishOnly": "npm run build"
   }
 }

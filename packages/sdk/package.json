@@ -1,6 +1,6 @@
 {
-  "name": "@smart-error/sdk",
-  "version": "0.1.0",
+  "name": "smart-error-sdk",
+  "version": "0.1.2",
   "description": "Smart Error Notifier SDK for Node.js - capture and report errors to your SEN API",
   "license": "MIT",
   "author": "Sergei <you@example.com>",
@@ -15,7 +15,9 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE",
+    "README.md"
   ],
   "keywords": [
     "errors",
@@ -39,5 +41,14 @@
     "build": "tsc -p tsconfig.json",
     "dev": "tsx watch src/index.ts",
     "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "smart-error-sdk": "^0.1.1",
+    "undici": "^7.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "tsx": "^4.19.2",
+    "typescript": "^5.9.2"
   }
 }

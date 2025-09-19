@@ -1,3 +1,5 @@
+import { fetch } from "undici";
+
 type InitOptions = {
   apiUrl: string;
   apiKey: string;
@@ -24,6 +26,7 @@ async function postError(apiUrl: string, apiKey: string, payload: { message: str
       "Authorization": `Bearer ${apiKey}`,
     },
     body: JSON.stringify(payload),
+    // @ts-ignore keepalive supported by undici fetch
     keepalive: true,
   }).catch(() => undefined);
 }
